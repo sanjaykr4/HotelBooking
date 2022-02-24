@@ -1,7 +1,6 @@
 package hotelbooking.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import hotelbooking.Model.Hotel;
@@ -15,24 +14,30 @@ public class HotelService implements HotelBookingInterface {
 	
 	public boolean AddHotel(Hotel hotel) {
 
-		HBIDao.save(hotel);
-	
-		return false;
+		boolean flag=false;
+		try {
+			HBIDao.save(hotel);
+			flag=true;			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return flag;
 	}
 
 	public boolean RemoveHotel(int id) {
-		// TODO Auto-generated method stub
+		
+		
 		return false;
 	}
 
 	public boolean UpdateHotel(int id) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	public List<Hotel> ViewHotel(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Hotel> hotel=HBIDao.findAll();	
+		return hotel;
 	}
 	
 }
