@@ -38,12 +38,15 @@ public class HotelService implements HotelBookingInterface {
 		return flag;
 	}
 
-	public boolean UpdateHotel(Hotel hotel) {
+	public boolean UpdateHotel(int id, String hotelname, String address, float price, int rating  ) {
 
-		hotel.setHotelName(hotel.getHotelName());
-		hotel.setHotelAddress(hotel.getHotelAddress());
-		hotel.setHotelPrice(hotel.getHotelPrice());
-		hotel.setHotelRating(hotel.getHotelRating());
+		Optional<Hotel> hotelobj=HBIDao.findById(id);
+		
+		
+		hotelobj.setHotelName(hotelname);
+		hotelobj.setHotelAddress(hotelobj.getHotelAddress());
+		hotel.setHotelPrice(hotelobj.getHotelPrice());
+		hotel.setHotelRating(hotelobj.getHotelRating());
 		
 		
 		return false;
