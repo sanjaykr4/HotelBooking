@@ -1,0 +1,17 @@
+
+                For pulling data into our laptop
+
+step1:- $ git clone {ssh code} (for first time only)
+
+from second time 
+step 1:- $ git pull (only this command from second time only)
+
+            
+
+
+                For pushing data into repositery
+step 0:- $ git status
+step 1:- $ git add .
+
+step 2:- $ git commit -m "{any text here what you have done}"
+step 3:- $ git push orgin master
