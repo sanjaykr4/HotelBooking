@@ -1,6 +1,8 @@
 package hotelbooking.service;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import hotelbooking.Model.Hotel;
@@ -25,18 +27,36 @@ public class HotelService implements HotelBookingInterface {
 	}
 
 	public boolean RemoveHotel(int id) {
+	
+		boolean flag=false;
+		try {
+			HBIDao.deleteById(id);
+			flag=true;			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return flag;
+	}
+
+	public boolean UpdateHotel(Hotel hotel) {
+
+		hotel.setHotelName(hotel.getHotelName());
+		hotel.setHotelAddress(hotel.getHotelAddress());
+		hotel.setHotelPrice(hotel.getHotelPrice());
+		hotel.setHotelRating(hotel.getHotelRating());
 		
 		
 		return false;
 	}
 
-	public boolean UpdateHotel(int id) {
-
-		return false;
+	public Optional<Hotel> ViewHotelById(int id) {
+		Optional<Hotel> hotel=HBIDao.findById(id);
+		return hotel;
 	}
 
-	public List<Hotel> ViewHotel(int id) {
-		List<Hotel> hotel=HBIDao.findAll();	
+	@Override
+	public List<Hotel> ViewHotel() {
+		List<Hotel> hotel=HBIDao.findAll();
 		return hotel;
 	}
 	
