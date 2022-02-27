@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import hotelbooking.Model.Hotel;
+import hotelbooking.model.Hotel;
 import hotelbooking.service.HotelService;
 
 @RestController

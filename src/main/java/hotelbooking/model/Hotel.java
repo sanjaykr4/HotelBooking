@@ -1,4 +1,4 @@
-package hotelbooking.Model;
+package hotelbooking.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

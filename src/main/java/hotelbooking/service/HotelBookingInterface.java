@@ -3,7 +3,7 @@ package hotelbooking.service;
 import java.util.List;
 import java.util.Optional;
 
-import hotelbooking.Model.Hotel;
+import hotelbooking.model.Hotel;
 
 public interface HotelBookingInterface {
 
