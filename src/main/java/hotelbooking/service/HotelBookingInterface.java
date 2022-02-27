@@ -11,6 +11,6 @@ public interface HotelBookingInterface {
 	public boolean RemoveHotel(int id);
 	public boolean UpdateHotel(Hotel hotel);
 	public List<Hotel> ViewHotel();
-	public Optional<Hotel> ViewHotelById(int id);
+	//public Optional<Hotel> ViewHotelById(int id);
 	
 }

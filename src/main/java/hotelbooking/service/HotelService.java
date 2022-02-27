@@ -38,29 +38,30 @@ public class HotelService implements HotelBookingInterface {
 		return flag;
 	}
 
-	public boolean UpdateHotel(int id, String hotelname, String address, float price, int rating  ) {
+	public boolean UpdateHotel(Hotel hotel) {
 
-		Optional<Hotel> hotelobj=HBIDao.findById(id);
+		Optional<Hotel> hotel1 = HBIDao.findById(hotel.getHotelId());
 		
+		Hotel hotel2 = hotel1.get();
 		
-		hotelobj.setHotelName(hotelname);
-		hotelobj.setHotelAddress(hotelobj.getHotelAddress());
-		hotel.setHotelPrice(hotelobj.getHotelPrice());
-		hotel.setHotelRating(hotelobj.getHotelRating());
-		
+		hotel2.setHotelName(hotel2.getHotelName());
+		hotel2.setHotelPrice(hotel2.getHotelPrice());
+		hotel2.setHotelAddress(hotel2.getHotelAddress());
+		hotel2.setHotelRating(hotel2.getHotelRating());
+		hotel2.setHotelImage(hotel2.getHotelImage());
+			
 		
 		return false;
 	}
 
-	public Optional<Hotel> ViewHotelById(int id) {
-		Optional<Hotel> hotel=HBIDao.findById(id);
-		return hotel;
-	}
+	
 
 	@Override
 	public List<Hotel> ViewHotel() {
 		List<Hotel> hotel=HBIDao.findAll();
 		return hotel;
 	}
+
+	
 	
 }
