@@ -14,7 +14,9 @@ step 0:- $ git status
 step 1:- $ git add .
 
 step 2:- $ git commit -m "{any text here what you have done}"
-step 3:- $ git push orgin master
+step 3:- $ git push origin master
 
 
 Hello everyone kya haal chal
+
+adfasdasdfasd

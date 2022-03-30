@@ -3,11 +3,9 @@ package hotelbooking.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import hotelbooking.model.Hotel;
+import hotelbooking.model.User;
 
 @Repository
-public interface HotelBookingDaoInterface extends JpaRepository<Hotel, Integer>{
+public interface UserDaoInterface extends JpaRepository<User, Integer>{
 
 }
-
-
