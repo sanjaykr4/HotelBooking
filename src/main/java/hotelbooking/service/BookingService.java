@@ -1,6 +1,7 @@
 package hotelbooking.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,26 +15,48 @@ public class BookingService implements BookingInterface{
 
 	@Override
 	public boolean AddBooking(Booking booking) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag=false;
+		try {
+			bookingDao.save(booking);
+			flag=true;			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return flag;
+	
 	}
 
 	@Override
 	public boolean RemoveBooking(int bookingid) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean flag=false;
+		try {
+			bookingDao.deleteById(bookingid);
+			flag=true;			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		return flag;
 	}
 
 	@Override
 	public boolean UpdateBooking(Booking booking) {
-		// TODO Auto-generated method stub
+		Optional<Booking> booking1 = bookingDao.findById(booking.getBookingId());
+		Booking booking2 =booking1.get();
+		
+		booking2.setBeginDate(booking2.getBeginDate());
+		booking2.setName(booking2.getName());
+		booking2.setNoOfGuest(booking2.getNoOfGuest());
+		booking2.setPhoneNo(booking2.getPhoneNo());
+		booking2.setEndDate(booking2.getEndDate());
+		
+		
 		return false;
 	}
 
 	@Override
 	public List<Booking> ViewBooking() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Booking> booking = bookingDao.findAll();
+		return booking;
 	}
 
 	
