@@ -3,8 +3,10 @@ package hotelbooking.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "hotels")
 public class Hotel {
 
 	@Id
@@ -26,7 +28,7 @@ public class Hotel {
 		this.hotelAddress = hotelAddress;
 		this.hotelPrice = hotelPrice;
 		this.hotelRating = hotelRating;
-		this.hotelImage = hotelImage;
+		//this.hotelImage = hotelImage;
 	}
 	
 	
