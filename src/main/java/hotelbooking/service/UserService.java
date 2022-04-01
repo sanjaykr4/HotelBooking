@@ -1,13 +1,15 @@
 package hotelbooking.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import hotelbooking.dao.UserDaoInterface;
+import hotelbooking.model.Booking;
 import hotelbooking.model.User;
 
-public abstract class UserService implements UserDaoInterface {
+public class UserService implements UserInterface {
 	
 	@Autowired
 	private UserDaoInterface UIDao;
@@ -37,4 +39,14 @@ public abstract class UserService implements UserDaoInterface {
 		
 		return false;
 	}
+
+	
+	public List<User> ViewUsers() {
+		List<User> user = UIDao.findAll();
+		return user;
+	}
+
+	
+	
+	
 }

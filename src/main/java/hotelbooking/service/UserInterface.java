@@ -10,5 +10,7 @@ public interface UserInterface {
 	
 	public boolean UpdateUser(User user);
 	
+	public List<User> ViewUsers();
+	
 
 }
