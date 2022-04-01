@@ -1,0 +1,11 @@
+.feedback{
+    background-image: url("../Images/feedback.jpg");
+    width: auto;
+    height: 500px;
+
+}
+.text{
+    position: relative;
+    padding-left: 10px;
+    padding-top: 100px;
+}
