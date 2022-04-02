@@ -28,7 +28,7 @@ public class Hotel {
 		this.hotelAddress = hotelAddress;
 		this.hotelPrice = hotelPrice;
 		this.hotelRating = hotelRating;
-		//this.hotelImage = hotelImage;
+		this.hotelImage = hotelImage;
 	}
 	
 	
