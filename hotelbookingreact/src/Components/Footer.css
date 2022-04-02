@@ -1,7 +1,7 @@
 .footer{
 	padding: 60px 0;
     width: 100%;
-    background: #d7f0ed;
+    background: #e6ebeb;
 	
     color: rgb(10, 0, 0);
    
@@ -22,11 +22,11 @@
 	bottom: 0;
 	width: 30px;
 	height: 4px;
-	background: #ff304d;
+	/* background: #ff304d; */
 }
 .footer-links a{
 	padding: 10px 0;
-	border-bottom: 1px solid #404040;
+	/* border-bottom: 1px solid #404040; */
 	color: rgb(14, 0, 0);
 	display: block;
 	transition: color 0.5s ease-in-out;
@@ -47,8 +47,8 @@
 	width: 100%;
 	padding: 25px 0;
 	text-align: center;
-	color: rgb(253, 253, 253);
-	background: rgb(0, 0, 0);
+	color: rgb(4, 0, 0);
+	background: rgb(181, 180, 176);
 }
 .aboutus{
 	

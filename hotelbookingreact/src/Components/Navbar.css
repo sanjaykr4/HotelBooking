@@ -1,0 +1,7 @@
+.container{
+    width: 100vw;
+}
+#admin{
+    position: relative;
+    right: -600px;
+}
