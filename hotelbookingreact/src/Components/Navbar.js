@@ -1,17 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "../Components/Navbar.css";
 
 export default function Navbar() {
     return (
-        // <div>
-        //     <nav className="navbar navbar-light bg-light">
-        //         <a className="navbar-brand"><h1>Hotel Khojo</h1></a>
-        //         <button className="btn btn-outline-success btn-lg my-2 my-sm-0" type="submit">Admin Login</button>
-        //     </nav>
-        // </div>
-
-
-
         <div >
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
@@ -25,11 +17,11 @@ export default function Navbar() {
                                 <a className="nav-link  mx-3" href="#"><b>Hotels</b></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link mx-3" href="#"><b>About us</b></a>
+                                <Link className="nav-link mx-3" to="/about"><b>About us</b></Link>
                             </li>
                             
                             <li className="nav-item">
-                                <a className="nav-link mx-3"><b>Contact us</b></a>
+                                <a className="nav-link mx-3" href="#"><b>Contact us</b></a>
                             </li>
                         </ul>
                         <button className="btn btn-outline-success btn-lg my-2 my-sm-0" id="admin" type="submit">Admin Login</button>
