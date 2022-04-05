@@ -4,11 +4,15 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import hotelbooking.dao.UserDaoInterface;
 import hotelbooking.model.Booking;
 import hotelbooking.model.User;
 
+@Component
+//@Service
 public class UserService implements UserInterface {
 	
 	@Autowired

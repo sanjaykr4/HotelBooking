@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: springboot-backend
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Sanjay
+Built-By: Amit singh
 Implementation-Vendor-Id: com.cdac
-Build-Jdk: 1.8.0_291
+Build-Jdk: 1.8.0_281
 Implementation-URL: https://spring.io/projects/spring-boot/hotelbookin
  g
 Created-By: Maven Integration for Eclipse
