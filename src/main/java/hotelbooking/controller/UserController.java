@@ -47,26 +47,7 @@ public class UserController {
 	
 	
 	
-	
-	/*
-	 * @PutMapping("/updateuser/{id}") public boolean updateEmployee(@PathVariable
-	 * int userId, @RequestBody User user){
-	 * 
-	 * return userservice.UpdateUser(user); }
-	 */
-	
-	
 
-//	@PostMapping("/updateuser")
-//	public boolean UpdateUser(@RequestBody User user) {
-//		
-//		return userservice.UpdateUser(user);
-//	}
-	
-	
-	
-	
-	
 	
 	@GetMapping("/viewuser")
 	public List<User> ViewUsers(){
