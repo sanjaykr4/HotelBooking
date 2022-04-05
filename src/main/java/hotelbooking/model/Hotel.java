@@ -15,20 +15,17 @@ public class Hotel {
 	private String hotelAddress;
 	private float hotelPrice;
 	private int hotelRating;
-	@Lob
-	private byte[] hotelImage;
 	
 	
 	public Hotel() {}
 	
-	public Hotel(int hotelId, String hotelName, String hotelAddress, float hotelPrice, int hotelRating,
-			byte[] hotelImage) {
+	public Hotel(int hotelId, String hotelName, String hotelAddress, float hotelPrice, int hotelRating) {
 		this.hotelId = hotelId;
 		this.hotelName = hotelName;
 		this.hotelAddress = hotelAddress;
 		this.hotelPrice = hotelPrice;
 		this.hotelRating = hotelRating;
-		this.hotelImage = hotelImage;
+		
 	}
 	
 	
@@ -63,12 +60,7 @@ public class Hotel {
 	public void setHotelRating(int hotelRating) {
 		this.hotelRating = hotelRating;
 	}
-	public byte[] getHotelImage() {
-		return hotelImage;
-	}
-	public void setHotelImage(byte[] hotelImage) {
-		this.hotelImage = hotelImage;
-	}
+	
 	
 	
 }

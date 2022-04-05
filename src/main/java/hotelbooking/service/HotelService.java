@@ -12,7 +12,7 @@ import hotelbooking.model.Hotel;
 
 
 @Component
-//@Service
+
 public class HotelService implements HotelBookingInterface {
 
 	@Autowired
@@ -43,20 +43,9 @@ public class HotelService implements HotelBookingInterface {
 		return flag;
 	}
 
-	public boolean UpdateHotel(Hotel hotel) {
+	public Hotel UpdateHotel(Hotel hotel) {
 
-		Optional<Hotel> hotel1 = HBIDao.findById(hotel.getHotelId());
-		
-		Hotel hotel2 = hotel1.get();
-		
-		hotel2.setHotelName(hotel2.getHotelName());
-		hotel2.setHotelPrice(hotel2.getHotelPrice());
-		hotel2.setHotelAddress(hotel2.getHotelAddress());
-		hotel2.setHotelRating(hotel2.getHotelRating());
-		hotel2.setHotelImage(hotel2.getHotelImage());
-			
-		
-		return false;
+		return HBIDao.save(hotel);
 	}
 
 	

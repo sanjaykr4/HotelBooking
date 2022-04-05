@@ -44,18 +44,8 @@ public class BookingService implements BookingInterface{
 	}
 
 	@Override
-	public boolean UpdateBooking(Booking booking) {
-		Optional<Booking> booking1 = bookingDao.findById(booking.getBookingId());
-		Booking booking2 =booking1.get();
-		
-		booking2.setBeginDate(booking2.getBeginDate());
-		booking2.setName(booking2.getName());
-		booking2.setNoOfGuest(booking2.getNoOfGuest());
-		booking2.setPhoneNo(booking2.getPhoneNo());
-		booking2.setEndDate(booking2.getEndDate());
-		
-		
-		return false;
+	public Booking UpdateBooking(Booking booking) {
+		return bookingDao.save(booking);
 	}
 
 	@Override

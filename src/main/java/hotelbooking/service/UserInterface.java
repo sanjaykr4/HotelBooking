@@ -8,7 +8,7 @@ public interface UserInterface {
 	
 	public boolean AddUser(User user);
 	
-	public boolean UpdateUser(User user);
+	public User updateUser(User user);
 	
 	public List<User> ViewUsers();
 	

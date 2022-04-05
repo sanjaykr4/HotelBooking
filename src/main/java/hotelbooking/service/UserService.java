@@ -31,18 +31,12 @@ public class UserService implements UserInterface {
 		return flag;
 	}
 	
-	public boolean UpdateUser(User user) {
-
-		Optional<User> user1 = UIDao.findById(user.getUserId());
-		
-		User user2 = user1.get();
-		
-		user2.setUserName(user2.getUserName());
-		user2.setPassword(user2.getPassword());
-		user2.setEmail(user2.getEmail());			
-		
-		return false;
-	}
+	public User updateUser(User user){		
+			
+		return UIDao.save(user);
+  }
+	
+	
 
 	
 	public List<User> ViewUsers() {
