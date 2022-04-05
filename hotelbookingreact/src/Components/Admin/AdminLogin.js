@@ -7,18 +7,20 @@ function AdminLogin() {
 
 		<div className="container my-5" style={{width:"700px"}}>
 
-			<h2 className="text-center">Admin Login</h2>
+			<h1 className="text-center">Admin Login</h1>
 			<form>
 
 				<div className="form-outline mb-4">
+				    <label className="form-label" for="form2Example1"><h5>User Name</h5></label>
 					<input type="email" id="form2Example1" className="form-control" placeholder="Enter User Name" />
-					<label className="form-label" for="form2Example1">User Name</label>
+					
 				</div>
 
 
 				<div className="form-outline mb-4">
+				    <label className="form-label" for="form2Example2"><h5>Password</h5></label>
 					<input type="password" id="form2Example2" className="form-control" placeholder="Enter Password" />
-					<label className="form-label" for="form2Example2">Password</label>
+					
 				</div>
 
 
@@ -42,7 +44,7 @@ function AdminLogin() {
 
 
 				<div className="text-center">
-					<p>Not a member? <a href="/adminregister">Register</a></p>
+				<h5><p>Not a member? <a href="/adminregister">Register</a></p></h5>
 				</div>
 			</form>
 
