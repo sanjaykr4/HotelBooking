@@ -8,16 +8,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages ="hotelbooking.dao")
+@EnableJpaRepositories(basePackages = "hotelbooking.dao")
 @EntityScan("hotelbooking.model")
-@ComponentScan(basePackages="hotelbooking.service")
-@ComponentScan(basePackages="hotelbooking.controller")
+@ComponentScan(basePackages = "hotelbooking.service")
+@ComponentScan(basePackages = "hotelbooking.controller")
 
 public class HotelMain {
-
 	public static void main(String[] args) {
 		SpringApplication.run(HotelMain.class, args);
-
 	}
-
 }

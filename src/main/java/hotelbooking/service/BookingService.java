@@ -12,7 +12,6 @@ import hotelbooking.model.Booking;
 
 
 @Component
-//@Service
 public class BookingService implements BookingInterface{
 	
 	@Autowired
@@ -20,15 +19,14 @@ public class BookingService implements BookingInterface{
 
 	@Override
 	public boolean AddBooking(Booking booking) {
-		boolean flag=false;
+		boolean flag = false;
 		try {
 			bookingDao.save(booking);
-			flag=true;			
+			flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		}		
+		}
 		return flag;
-	
 	}
 
 	@Override

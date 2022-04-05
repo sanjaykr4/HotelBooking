@@ -17,45 +17,38 @@ import hotelbooking.model.User;
 import hotelbooking.service.HotelService;
 
 @RestController
-public class HotelBookingController{
+public class HotelBookingController {
 
 	@Autowired
 	public HotelService hotelservice;
-	
+
 	@Autowired
 	public HotelBookingDaoInterface daointerface;
-	
+
 	@PostMapping("/addHotel")
 	public boolean AddHotel(@RequestBody Hotel hotel) {
-		
 		return hotelservice.AddHotel(hotel);
 	}
 
 	@GetMapping("/removehotel/{id}")
 	public boolean RemoveHotel(@PathVariable int id) {
-		
 		return hotelservice.RemoveHotel(id);
 	}
 
 	@RequestMapping(value = "/updatehotel/{id}", method = RequestMethod.PUT)
 	public Hotel updateLocation(@RequestBody Hotel hotelDetails, @PathVariable int id) {
-
 		Hotel hotel = daointerface.findById(id).get();
 		hotel.setHotelName(hotelDetails.getHotelName());
 		hotel.setHotelAddress(hotelDetails.getHotelAddress());
 		hotel.setHotelRating(hotelDetails.getHotelRating());
 		hotel.setHotelPrice(hotelDetails.getHotelPrice());
 		hotelservice.UpdateHotel(hotel);
-		return hotel; 
+		return hotel;
 	}
-	
 
 	@GetMapping("/viewhotel")
 	public List<Hotel> ViewHotel() {
-		
 		return hotelservice.ViewHotel();
 	}
-	
-	
 
 }

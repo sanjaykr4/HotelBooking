@@ -26,32 +26,22 @@ public class UserController {
 	public UserDaoInterface daoInterface;
 	
 	@PostMapping("/adduser")
-	public boolean AddUser(@RequestBody User user) {
-		
+	public boolean AddUser(@RequestBody User user) {	
 		return userservice.AddUser(user);
 	}
 	
-	
-	
-	
 	@RequestMapping(value = "/updateuser/{id}", method = RequestMethod.PUT)
 	public User update(@RequestBody User userDeatils, @PathVariable int id) {
-
 		User user = daoInterface.findById(id).get();
 		user.setEmail(userDeatils.getEmail());
 		user.setPassword(userDeatils.getPassword());
 		user.setUserName(userDeatils.getUserName());
 		userservice.updateUser(user);
 		return user; 
-	}
-	
-	
-	
-
+	}	
 	
 	@GetMapping("/viewuser")
 	public List<User> ViewUsers(){
-		
 		return userservice.ViewUsers();
 	}
 

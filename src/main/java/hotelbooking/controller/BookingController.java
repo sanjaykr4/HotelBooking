@@ -33,13 +33,11 @@ public class BookingController  {
 
 	@GetMapping("/removebooking/{id}")
 	public boolean RemoveBooking(@PathVariable int bookingid) {
-		
 		return bookingservice.RemoveBooking(bookingid);
 	}
 
 	@RequestMapping(value = "/updatebooking/{id}", method = RequestMethod.PUT)
 	public Booking updateBooking(@RequestBody Booking bookingDeatils, @PathVariable int id) {
-
 		Booking booking = daointerface.findById(id).get();
 		booking.setName(bookingDeatils.getName());
 		booking.setBeginDate(bookingDeatils.getBeginDate());
@@ -52,7 +50,6 @@ public class BookingController  {
 
 	@GetMapping("/viewbooking")
 	public List<Booking> ViewBooking() {
-		
 		return bookingservice.ViewBooking();
 	}
 

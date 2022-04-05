@@ -17,29 +17,28 @@ public class HotelService implements HotelBookingInterface {
 
 	@Autowired
 	private HotelBookingDaoInterface HBIDao;
-	
-	
+
 	public boolean AddHotel(Hotel hotel) {
 
-		boolean flag=false;
+		boolean flag = false;
 		try {
 			HBIDao.save(hotel);
-			flag=true;			
+			flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		}		
+		}
 		return flag;
 	}
 
 	public boolean RemoveHotel(int id) {
-	
-		boolean flag=false;
+
+		boolean flag = false;
 		try {
 			HBIDao.deleteById(id);
-			flag=true;			
+			flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-		}		
+		}
 		return flag;
 	}
 
@@ -48,14 +47,10 @@ public class HotelService implements HotelBookingInterface {
 		return HBIDao.save(hotel);
 	}
 
-	
-
 	@Override
 	public List<Hotel> ViewHotel() {
-		List<Hotel> hotel=HBIDao.findAll();
+		List<Hotel> hotel = HBIDao.findAll();
 		return hotel;
 	}
 
-	
-	
 }

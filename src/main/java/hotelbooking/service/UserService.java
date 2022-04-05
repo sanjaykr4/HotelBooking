@@ -12,7 +12,6 @@ import hotelbooking.model.Booking;
 import hotelbooking.model.User;
 
 @Component
-//@Service
 public class UserService implements UserInterface {
 	
 	@Autowired
@@ -36,15 +35,9 @@ public class UserService implements UserInterface {
 		return UIDao.save(user);
   }
 	
-	
-
-	
 	public List<User> ViewUsers() {
 		List<User> user = UIDao.findAll();
 		return user;
 	}
 
-	
-	
-	
 }
