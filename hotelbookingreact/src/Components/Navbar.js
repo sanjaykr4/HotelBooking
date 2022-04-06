@@ -22,7 +22,7 @@ export default function Navbar() {
                                 <a className="nav-link mx-3" href="/about"><b>Contact us</b></a>
                             </li>
                         </ul>
-                        <Link className="btn btn-outline-primary btn-lg my-2 my-sm-0" id="user" type="submit" to="/userlogin">User Login</Link>
+                        <Link className="btn btn-outline-primary btn-lg my-5 my-sm-0" id="user" type="submit" to="/userlogin">User Login</Link>
                         <Link className="btn btn-outline-success btn-lg my-2 my-sm-0" id="admin" type="submit" to="/adminlogin">Admin Login</Link>
                     </div>
                 </div>

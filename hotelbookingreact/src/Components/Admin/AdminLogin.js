@@ -1,25 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function AdminLogin() {
+	const[username,setusername]=useState('');
+	const[password,setpassword]=useState('');
+	
+	const handleusernamechange=(e)=>{
+		setusername(e.target.value);
+	}
+
+	const handlepasswordchange=(e)=>{
+		setpassword(e.target.value);
+	}
+    
+     const navigate = useNavigate();
+
+	const handleformsubmit=(e)=>{
+		e.preventDefault();
+        if (username==='admin') {
+			if(password==='admin')
+			{
+				navigate('/curdhotel')
+			}
+		} else {
+			alert('Kindly enter correct details!!!');
+		}
+
+	}
+
 
 	return (
+		<div className="container my-5" style={{width:"500px"}}>
 
-
-		<div className="container my-5" style={{width:"700px"}}>
-
-			<h1 className="text-center">Admin Login</h1>
-			<form>
+			<h2 className="text-center my-5" >Admin Login</h2>
+			<form name="myForm" method="post" >
 
 				<div className="form-outline mb-4">
-				    <label className="form-label" for="form2Example1"><h5>User Name</h5></label>
-					<input type="email" id="form2Example1" className="form-control" placeholder="Enter User Name" />
+					<input type="email" id="form2Example1" className="form-control" placeholder="UserName" onChange={handleusernamechange} value={username} />
 					
 				</div>
 
 
 				<div className="form-outline mb-4">
-				    <label className="form-label" for="form2Example2"><h5>Password</h5></label>
-					<input type="password" id="form2Example2" className="form-control" placeholder="Enter Password" />
+					<input type="password" id="form2Example2" className="form-control" placeholder="Password" onChange={handlepasswordchange} value={password} />
 					
 				</div>
 
@@ -33,19 +57,14 @@ function AdminLogin() {
 						</div>
 					</div>
 
-					<div className="col">
-
-						<a href="#!">Forgot password?</a>
-					</div>
+					
 				</div>
 
 
-				<button type="button" className="btn btn-primary btn-block mb-4">Sign in</button>
+				<button type="button" className="btn btn-primary btn-block mb-4"  onClick={handleformsubmit} >Sign in</button>
 
 
-				<div className="text-center">
-				<h5><p>Not a member? <a href="/adminregister">Register</a></p></h5>
-				</div>
+				
 			</form>
 
 
