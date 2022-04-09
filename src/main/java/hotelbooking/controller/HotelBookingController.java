@@ -3,6 +3,7 @@ package hotelbooking.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,9 @@ import hotelbooking.model.Hotel;
 import hotelbooking.model.User;
 import hotelbooking.service.HotelService;
 
+@CrossOrigin(origins = "http://localhost:7777")
 @RestController
+@RequestMapping("/api")
 public class HotelBookingController {
 
 	@Autowired
